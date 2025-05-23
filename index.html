@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rumah Makan TobaSamosir</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #333;
+    }
+    header {
+      background-color: rgba(230, 126, 34, 0.95);
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      background-color: rgba(211, 84, 0, 0.95);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+    .container {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.75);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #d35400;
+      text-align: center;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 { margin: 10px 0 5px; }
+    .card p {
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .btn {
+      background-color: #e67e22;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+    .btn:hover { background-color: #d35400; }
+    form {
+      max-width: 600px;
+      margin: 60px auto 0;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+    footer p { margin: 5px; }
+    @media (max-width: 600px) {
+      nav { flex-direction: column; align-items: center; }
+    }
+  </style>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('.card', {
+      delay: 200,
+      duration: 600,
+      distance: '50px',
+      origin: 'bottom',
+      reset: true
+    });
+  </script>
+  
+</head>
+<body>
+
+  <button onclick="toggleDarkMode()" class="btn" style="position:fixed;top:20px;right:20px;z-index:999;">🌙 Mode</button>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+<style>
+  .dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+  }
+  .dark-mode .container, 
+  .dark-mode .card, 
+  .dark-mode form {
+    background-color: rgba(30, 30, 30, 0.85) !important;
+    color: #f0f0f0 !important;
+  }
+  .dark-mode nav, .dark-mode header {
+    background-color: #1a1a1a !important;
+  }
+</style>
+
+
+  <header>
+    <h1>Rumah Makan TobaSamosir</h1>
+    <p>Lezat, Murah, dan Bersahabat</p>
+    <p id="typed-text" style="margin-top: 10px; font-weight: bold;"></p>
+
+  </header>
+
+  <div class="container" style="margin-top: 20px; background-color: rgba(255,255,255,0.85); padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <p style="text-align: center; font-size: 1.1em; color: #444;">
+      Rumah Makan <strong>TobaSamosir</strong> adalah pilihan tepat bagi pecinta kuliner khas Batak yang autentik dan menggugah selera. 
+      Menyajikan berbagai hidangan tradisional seperti Arsik, Napinadar, hingga Minuman Legendaris Soda Badak, 
+      kami berkomitmen menghadirkan cita rasa lokal dengan harga terjangkau dan pelayanan ramah. 
+      Kunjungi kami dan rasakan sendiri kelezatannya!
+    </p>
+  </div>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#menu">Menu</a>
+    <a href="#pesan">Pesan</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <div class="container" id="menu">
+    <h2>Menu Favorit Kami</h2>
+    <div class="menu-grid">
+      <div class="card">
+        <img src="https://grosirmesin.com/wp-content/uploads/2022/01/D08whWhU0AEBHvu-2-599x400.jpg" alt="Arsik Ikan Mas">
+        <h3>Arsik</h3>
+        <p>Rp 70.000/kg</p>
+        <button class="btn" onclick="pesanWhatsApp('Arsik')">Pesan Sekarang</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn.yummy.co.id/content-images/images/20231215/895905751f89d3d53be6b525128a985f.jpg" alt="Napinadar">
+        <h3>Napinadar</h3>
+        <p>Rp 35.000</p>
+        <button class="btn" onclick="pesanWhatsApp('Napinadar')">Pesan Sekarang</button>
+      </div>
+      <div class="card">
+        <img src="https://serramena.info/wp-content/uploads/2024/10/Naniura.jpg" alt="Naniura">
+        <h3>Naniura</h3>
+        <p>Rp 120.000/1,5kg</p>
+        <button class="btn" onclick="pesanWhatsApp('Naniura')">Pesan Sekarang</button>
+      </div>
+      <div class="card">
+        <img src="https://mediapijar.com/wp-content/uploads/2021/05/IMG_9756.jpg" alt="Saksang">
+        <h3>Saksang</h3>
+        <p>Rp 25.000</p>
+        <button class="btn" onclick="pesanWhatsApp('Saksang')">Pesan Sekarang</button>
+      </div>
+      <div class="card">
+        <img src="https://img-global.cpcdn.com/recipes/2d5db8daa2d1c4bd/1280x1280sq70/photo.webp" alt="Mie Krosok">
+        <h3>Mie krosok</h3>
+        <p>Rp 12.000</p>
+        <button class="btn" onclick="pesanWhatsApp('Mie Krosok')">Pesan Sekarang</button>
+      </div>
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/community/media/visual/2021/08/19/5-rekomendasi-nasi-campur-non-halal-dengan-campuran-babi-panggang-2.png?w=700&q=90" alt="Nasi Campur Non-Halal" width="700">
+        <h3>Nasi Perang</h3>
+        <p>Rp 12.000</p>
+        <button class="btn" onclick="pesanWhatsApp('Nasi Perang')">Pesan Sekarang</button>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Panggang_1.JPG" alt="Panggang">
+        <h3>Panggang</h3>
+        <p>Rp 35.000</p>
+        <button class="btn" onclick="pesanWhatsApp('Panggang')">Pesan Sekarang</button>
+      </div>
+      <div class="card">
+        <img src="https://akcdn.detik.net.id/community/media/visual/2023/11/20/badak-minuman-soda-legendaris-dari-pematang-siantar-istimewa_169.jpeg?w=700&q=90" alt="Soda Badak dari Pematang Siantar" width="700">
+        <h3>Minuman Badak</h3>
+        <p>Rp 10.000</p>
+        <button class="btn" onclick="pesanWhatsApp('Minuman Badak')">Pesan Sekarang</button>
+      </div>
+    </div>
+
+    <form id="pesan" action="https://wa.me/6281537678081" method="GET" target="_blank">
+      <h2>Formulir Pemesanan</h2>
+
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="menu">Menu yang Dipesan:</label>
+      <input type="text" id="menu" name="menu" required>
+
+      <label for="jumlah">Jumlah:</label>
+      <input type="number" id="jumlah" name="jumlah" required>
+
+      <label for="alamat">Alamat Pengantaran:</label>
+      <textarea id="alamat" name="alamat" required rows="3"></textarea>
+
+      <label for="kontak">No. HP / WhatsApp:</label>
+      <input type="text" id="kontak" name="kontak" required>
+
+      <button type="submit" class="btn" onclick="alert('Pesanan Anda akan diteruskan ke WhatsApp')">Kirim Pesanan</button>
+    </form>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.5338525398245!2d98.88408712837698!3d3.5562612997751892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031488b74af8aad%3A0x6c9eb387705a9186!2sJl.%20Pematang%20Siantar%20No.177%2C%20Tj.%20Garbus%20Satu%2C%20Kec.%20Lubuk%20Pakam%2C%20Kabupaten%20Deli%20Serdang%2C%20Sumatera%20Utara%2020551!5e0!3m2!1sen!2sid!4v1745178476573!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <footer id="kontak">
+    <p>&copy; 2025 Rumah Makan TobaSamosir</p>
+    <p>Alamat: Jl. Pematang Siantar No.177, Disebrang SMA RK</p>
+    <p>Email: christymarbun067@gmail.com | Telp: 0815-3767-8081, 0853-5771-3919, 0822-8839-3662</p>
+  </footer>
+
+  <script>
+    function pesanWhatsApp(menu) {
+      const nomor = '6281537678081';
+      const pesan = `Halo! Saya ingin memesan menu: ${menu}. Mohon konfirmasi ya.`;
+      const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+  <button id="scrollTopBtn" class="btn" style="position:fixed;bottom:20px;right:20px;display:none;">↑</button>
+  <script>
+    const btn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      btn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+  <script>
+    const text = "Hidangan Batak Asli, Langsung dari Dapur Toba!";
+    let index = 0;
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById("typed-text").textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 60);
+      }
+    }
+    typeEffect();
+  </script>
+  
+  
+</body>
+</html>
